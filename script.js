@@ -1,19 +1,11 @@
-const menuToggle = document.getElementById('menuToggle');
-        const closeMenu = document.getElementById('closeMenu');
-        const sideMenu = document.getElementById('sideMenu');
-        const overlay = document.getElementById('overlay');
-
-        menuToggle.addEventListener('click', () => {
-            sideMenu.classList.add('active');
-            overlay.classList.add('active');
-        });
-
-        closeMenu.addEventListener('click', () => {
-            sideMenu.classList.remove('active');
-            overlay.classList.remove('active');
-        });
-
-        overlay.addEventListener('click', () => {
-            sideMenu.classList.remove('active');
-            overlay.classList.remove('active');
-        });
+document.addEventListener('DOMContentLoaded', function() {
+            const hourglass = document.querySelector('.hourglass');
+            
+            // Reinicia la animación cada 4 segundos
+            setInterval(() => {
+                hourglass.style.animation = 'none';
+                void hourglass.offsetWidth; // Truco para reiniciar animación
+                hourglass.style.animation = 'rotateTwice 2s ease-in-out 2';
+            }, 4000);
+            
+            });
